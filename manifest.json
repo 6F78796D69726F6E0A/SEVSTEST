@@ -1,0 +1,64 @@
+{
+  "source": "https://www.sevs.com.au/",
+  "captured": "2026-08-08",
+  "status": "Original SEVS website image assets downloaded into this project for local static hosting. No runtime hotlinks to the legacy website are required for these assets.",
+  "assets": [
+    {
+      "page": "/about/our-specialists/",
+      "files": [
+        "/images/specialists/ken-faulder.jpg",
+        "/images/specialists/brendan-steinfort.jpg",
+        "/images/specialists/alice-ma.jpg",
+        "/images/specialists/blake-giarola.png"
+      ]
+    },
+    {
+      "page": "/aneurysm/brain-aneurysm-treatment/",
+      "files": [
+        "/images/clinical/brain-aneurysm-1.jpg",
+        "/images/clinical/brain-aneurysm-2.jpg",
+        "/images/clinical/brain-aneurysm-3.jpg",
+        "/images/clinical/brain-aneurysm-4.jpg"
+      ]
+    },
+    {
+      "page": "/aneurysm/flow-diversion-for-aneurysm-treatment/",
+      "files": [
+        "/images/clinical/flow-diversion-1.png",
+        "/images/clinical/flow-diversion-2.png",
+        "/images/clinical/flow-diversion-3.png",
+        "/images/clinical/flow-diverter-device.png"
+      ]
+    },
+    {
+      "page": "/aneurysm/renal-aneurysm-treatment/",
+      "files": [
+        "/images/clinical/renal-aneurysm-1.jpg",
+        "/images/clinical/renal-aneurysm-2.jpg",
+        "/images/clinical/renal-aneurysm-3.jpg",
+        "/images/clinical/renal-aneurysm-4.jpg"
+      ]
+    },
+    {
+      "page": "/inr/avm-treatment/",
+      "files": [
+        "/images/clinical/avm-pre-treatment.png",
+        "/images/clinical/avm-post-treatment.png"
+      ]
+    },
+    {
+      "page": "/inr/cerebral-angiogram/",
+      "files": [
+        "/images/procedures/cerebral-angiography-suite.jpg"
+      ]
+    },
+    {
+      "page": "/procedures/ovarian-vein-embolisation/",
+      "files": [
+        "/images/clinical/ovarian-vein-upper.jpg",
+        "/images/clinical/ovarian-vein-lower.jpg",
+        "/images/clinical/ovarian-vein-coiled.jpg"
+      ]
+    }
+  ]
+}
