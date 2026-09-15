@@ -3,19 +3,19 @@ const path = Astro.url.pathname;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (href) => `${base}${href}`;
 const nav = [
- {label:'About',href:'/about/'},
- {label:'Specialists',href:'/about/specialists/'},
+ {label:'About',href:'/about/us/'},
+ {label:'Specialists',href:'/about/our-specialists/'},
  {label:'Conditions',href:'/conditions/'},
  {label:'Procedures',href:'/procedures/overview/'},
  {label:'Patient information',href:'/patient-information/all/'},
  {label:'Contact',href:'/contact-us/'}
 ];
 ---
-<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
- <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 lg:px-8">
-  <a href={url("/")} class="flex items-center gap-3 no-underline" aria-label="SEVS home"><span class="grid size-11 place-items-center rounded-full bg-brand-700 text-lg font-bold text-white">S</span><span><span class="block text-sm font-bold tracking-[.18em] text-brand-700">SEVS</span><span class="hidden text-xs text-slate-500 sm:block">Specialist Endovascular Services</span></span></a>
-  <nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">{nav.map(item => <a href={url(item.href)} class:list={["text-sm font-medium hover:text-brand-700", path.includes(item.href) ? "text-brand-700" : "text-slate-700"]}>{item.label}</a>)}</nav>
-  <div class="flex items-center gap-2"><a href="tel:1300553339" class="hidden rounded-full border border-brand-700 px-4 py-2 text-sm font-semibold text-brand-700 sm:inline-flex">1300 553 339</a><a href={url("/booking/")} class="rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Book appointment</a></div>
+<header class="sticky top-0 z-50 border-b border-sky-100 bg-white/95 backdrop-blur">
+ <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-3 lg:px-8">
+  <a href={url("/")} class="block shrink-0 no-underline" aria-label="SEVS — Specialist Endovascular Services home"><img src={url("/images/brand/sevs-logo.svg")} alt="SEVS — Specialist Endovascular Services" class="h-[58px] w-auto sm:h-[66px]" width="310" height="75" /></a>
+  <nav class="hidden items-center gap-5 xl:flex" aria-label="Main navigation">{nav.map(item => <a href={url(item.href)} class:list={["text-sm font-semibold hover:text-brand-700", path.includes(item.href) ? "text-brand-700" : "text-slate-700"]}>{item.label}</a>)}</nav>
+  <div class="flex items-center gap-2"><a href="tel:1300553339" class="hidden rounded-full border border-brand-500 px-4 py-2 text-sm font-semibold text-brand-700 md:inline-flex">1300 553 339</a><a href={url("/booking/")} class="rounded-full bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700">Book appointment</a></div>
  </div>
- <details class="border-t border-slate-100 lg:hidden"><summary class="cursor-pointer px-5 py-3 text-sm font-semibold">Menu</summary><nav class="grid gap-1 px-5 pb-4">{nav.map(item => <a href={url(item.href)} class="rounded-lg px-3 py-2 text-sm hover:bg-brand-50">{item.label}</a>)}</nav></details>
+ <details class="border-t border-sky-50 xl:hidden"><summary class="cursor-pointer px-5 py-3 text-sm font-semibold text-brand-700">Menu</summary><nav class="grid gap-1 px-5 pb-4">{nav.map(item => <a href={url(item.href)} class="rounded-lg px-3 py-2 text-sm font-medium hover:bg-brand-50">{item.label}</a>)}</nav></details>
 </header>
