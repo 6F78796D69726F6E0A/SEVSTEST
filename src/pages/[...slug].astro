@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import pages from '../data/pages.json';
+export function getStaticPaths(){return pages.filter(p=>p.route!='/').map(p=>({params:{slug:p.route.replace(/^\//,'').replace(/\/$/,'')},props:{page:p}}));}
+const {page}=Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const url = (href) => `${base}${href}`;
+const pageHtml = page.html.replace(/(href|src)="\//g, `$1="${base}/`);
+---
+<BaseLayout title={page.title} heading={page.heading} description={page.description}><section class="mx-auto max-w-4xl px-5 py-14 lg:px-8"><article class="prose-sevs" set:html={pageHtml}/></section><section class="mx-auto max-w-5xl px-5 pb-16 lg:px-8"><div class="rounded-3xl bg-brand-50 p-8 md:flex md:items-center md:justify-between"><div><h2 class="mt-0 text-2xl">Need to discuss your referral or appointment?</h2><p class="mb-0">Contact the SEVS team for appointment and patient information.</p></div><a href={url("/contact-us/")} class="mt-5 inline-flex rounded-full bg-brand-700 px-5 py-3 font-semibold text-white no-underline md:mt-0">Contact SEVS</a></div></section></BaseLayout>
